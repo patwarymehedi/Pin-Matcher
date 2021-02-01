@@ -40,9 +40,11 @@ function verifyPin() {
     const typedPin = document.getElementById('typedPin').value;
     if (pin === typedPin) {
         displayMatch('block', 'none');
+        document.getElementById('typedPin').value = '';
     }
     else {
         displayMatch('none', 'block');
+        document.getElementById('typedPin').value = '';
         attempt();
     }
     
